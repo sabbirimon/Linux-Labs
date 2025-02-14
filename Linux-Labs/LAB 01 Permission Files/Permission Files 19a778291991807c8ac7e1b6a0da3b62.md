@@ -1,4 +1,4 @@
-# Permission Files (Next Lab)
+# Permission Files
 
 # **Introduction**
 
@@ -38,7 +38,7 @@ ls
 
 `ls` stands for "list." It shows you the files and directories in your current location. You should see `example.txt` listed in the output. If you don't see it, double-check that you ran the `touch` command correctly and that you are indeed in the `~/project` directory.
 
-![Screenshot 2568-02-14 at 8.08.56 AM.png](Permission%20Files%20(Next%20Lab)%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.08.56_AM.png)
+![Screenshot 2568-02-14 at 8.08.56 AM.png](Permission%20Files%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.08.56_AM.png)
 
 # **Changing the Ownership of a File**
 
@@ -52,7 +52,7 @@ ls -l example.txt
 
 The `ls -l` command (list with long format) provides detailed information about the file, including its permissions, owner, and group. You should see output similar to this:
 
-![Screenshot 2568-02-14 at 8.12.19 AM.png](Permission%20Files%20(Next%20Lab)%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.12.19_AM.png)
+![Screenshot 2568-02-14 at 8.12.19 AM.png](Permission%20Files%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.12.19_AM.png)
 
 ```
 -rw-rw-r-- 1 labex labex 0 Jul 29 15:11 example.txt 
@@ -88,7 +88,7 @@ ls -l example.txt
 
 You should now see that both the owner and group have changed to `root`:
 
-![Screenshot 2568-02-14 at 8.17.30 AM.png](Permission%20Files%20(Next%20Lab)%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.17.30_AM.png)
+![Screenshot 2568-02-14 at 8.17.30 AM.png](Permission%20Files%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.17.30_AM.png)
 
 ```
 -rw-rw-r-- 1 root root 0 Jul 29 15:11 example.txt 
@@ -108,7 +108,7 @@ echo "Hello, world" > new-dir/file1.txt
 echo "Another file" > new-dir/subdir/file2.txt 
 ```
 
-![Screenshot 2568-02-14 at 8.20.22 AM.png](Permission%20Files%20(Next%20Lab)%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.20.22_AM.png)
+![Screenshot 2568-02-14 at 8.20.22 AM.png](Permission%20Files%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.20.22_AM.png)
 
 Let's break down these commands:
 
@@ -137,7 +137,7 @@ total 4
 -rw-rw-r-- 1 labex labex 13 Jul 29 09:15 file2.txt 
 ```
 
-![Screenshot 2568-02-14 at 8.22.47 AM.png](Permission%20Files%20(Next%20Lab)%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.22.47_AM.png)
+![Screenshot 2568-02-14 at 8.22.47 AM.png](Permission%20Files%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.22.47_AM.png)
 
 This shows that the directory `new-dir`, its subdirectory `subdir`, and the files `file1.txt` and `file2.txt` are all owned by `labex`.
 
@@ -170,7 +170,7 @@ total 4
 -rw-rw-r-- 1 root root 13 Jul 29 09:15 file2.txt 
 ```
 
-![Screenshot 2568-02-14 at 8.25.26 AM.png](Permission%20Files%20(Next%20Lab)%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.25.26_AM.png)
+![Screenshot 2568-02-14 at 8.25.26 AM.png](Permission%20Files%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.25.26_AM.png)
 
 As you can see, the ownership of the directory and all its contents has changed to root. This demonstrates the power of the `-R` option for making widespread changes to ownership within a directory structure.
 
@@ -186,7 +186,7 @@ ls -l example.txt
 
 You might see something like this:
 
-![Screenshot 2568-02-14 at 8.32.19 AM.png](Permission%20Files%20(Next%20Lab)%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.32.19_AM.png)
+![Screenshot 2568-02-14 at 8.32.19 AM.png](Permission%20Files%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.32.19_AM.png)
 
 ```
 -rw-rw-r-- 1 root root 0 Jul 29 15:11 example.txt 
@@ -238,7 +238,7 @@ ls -l example.txt
 
 You should now see:
 
-![Screenshot 2568-02-14 at 8.36.46 AM.png](Permission%20Files%20(Next%20Lab)%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.36.46_AM.png)
+![Screenshot 2568-02-14 at 8.36.46 AM.png](Permission%20Files%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.36.46_AM.png)
 
 ```
 -rwx------ 1 root root 0 Jul 29 15:11 example.txt 
@@ -265,7 +265,7 @@ ls -ld ~/test-dir
 
 The `-d` option in `ls -l` tells `ls` to list the directory itself, rather than its contents. Without `-d`, `ls` would list the files and subdirectories *inside* `test-dir`, which is empty right now. You should see:
 
-![Screenshot 2568-02-14 at 8.38.59 AM.png](Permission%20Files%20(Next%20Lab)%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.38.59_AM.png)
+![Screenshot 2568-02-14 at 8.38.59 AM.png](Permission%20Files%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.38.59_AM.png)
 
 ```
 drwx------ 2 labex labex 4096 Jul 29 15:45 /home/labex/test-dir 
@@ -302,7 +302,7 @@ ls -ld ~/test-dir
 
 You should now see:
 
-![Screenshot 2568-02-14 at 8.40.13 AM.png](Permission%20Files%20(Next%20Lab)%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.40.13_AM.png)
+![Screenshot 2568-02-14 at 8.40.13 AM.png](Permission%20Files%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.40.13_AM.png)
 
 ```
 drwxr-xr-x 2 labex labex 4096 Jul 29 15:45 /home/labex/test-dir 
@@ -337,7 +337,7 @@ ls -l script.sh
 
 You should see something like:
 
-![Screenshot 2568-02-14 at 8.42.00 AM.png](Permission%20Files%20(Next%20Lab)%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.42.00_AM.png)
+![Screenshot 2568-02-14 at 8.42.00 AM.png](Permission%20Files%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.42.00_AM.png)
 
 ```
 -rw-rw-r-- 1 labex labex 32 Jul 29 16:30 script.sh 
@@ -374,7 +374,7 @@ ls -l script.sh
 
 You should now see:
 
-![Screenshot 2568-02-14 at 8.44.47 AM.png](Permission%20Files%20(Next%20Lab)%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.44.47_AM.png)
+![Screenshot 2568-02-14 at 8.44.47 AM.png](Permission%20Files%2019a778291991807c8ac7e1b6a0da3b62/Screenshot_2568-02-14_at_8.44.47_AM.png)
 
 ```
 -rwxrw-r-- 1 labex labex 32 Jul 29 16:30 script.sh 
